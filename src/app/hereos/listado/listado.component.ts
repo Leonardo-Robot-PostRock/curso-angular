@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './listado.component.html',
 })
 export class ListadoComponent {
-  public heroeBorrados: string[] = [];
+  public heroeBorrado: string = '';
   heroes: string[] = [
     'Ironman',
     'Capitan America',
@@ -13,8 +13,9 @@ export class ListadoComponent {
     'Thor',
     'Black Widow',
   ];
-  borrarHeroe(i: number): void {
-    this.heroeBorrados.push(this.heroes[i]);
-    this.heroes.splice(i, 1);
+  borrarHeroe(): void {
+    this.heroeBorrado = this.heroes.pop() || '';
+    console.log(this.heroeBorrado);
+    
   }
 }
