@@ -5,7 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './listado.component.html',
 })
 export class ListadoComponent {
-  constructor() {
-    console.log('constructor');
+  public heroeBorrados: string[] = [];
+  heroes: string[] = [
+    'Ironman',
+    'Capitan America',
+    'Hulk',
+    'Thor',
+    'Black Widow',
+  ];
+  borrarHeroe(i: number): void {
+    this.heroeBorrados.push(this.heroes[i]);
+    this.heroes.splice(i, 1);
   }
 }
