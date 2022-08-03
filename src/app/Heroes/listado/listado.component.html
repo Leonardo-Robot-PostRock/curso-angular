@@ -4,7 +4,7 @@
   <h3 *ngFor="let heroe of heroes; let i = index">{{ i + 1 }}-{{ heroe }}</h3>
 </div>
 <ng-template #noheroes>No hay heroes</ng-template>
-<hr>
+<hr />
 <button (click)="borrarHeroe()" style="width: 80px; height: 50px">
   Borrar
 </button>
