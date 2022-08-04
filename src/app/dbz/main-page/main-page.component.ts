@@ -14,9 +14,9 @@ export class MainPageComponent {
     poder: 14000,
   };
 
-  cambiarNombre(event: any) {
-    console.log(event.target.value);
-  }
+  // cambiarNombre(event: any) {
+  //   console.log(event.target.value);
+  // }
 
   agregar() {
     console.log(this.nuevo);
