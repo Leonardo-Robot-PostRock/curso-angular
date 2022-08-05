@@ -3,27 +3,14 @@
 
 <div class="row">
   <div class="col">
-    <app-personajes></app-personajes>
+    <app-personajes [personajes]="personajes">
+
+    </app-personajes>
   </div>
   <div class="col">
-    <h3>Agregar <small>{{nuevo.nombre}}</small></h3>
-    <hr />
-
-    <form (ngSubmit)="agregar($event)">
-      <input
-        type="text"
-        placeholder="Nombre"
-        name="nombre"
-        [(ngModel)]="nuevo.nombre" />
-      <!-- [value]="nuevo.nombre"
-        (input)="cambiarNombre($event)"  -->
-      <input
-        type="text"
-        placeholder="Poder"
-        name="poder"
-        [(ngModel)]="nuevo.poder" />
-      <!-- [value]="nuevo.poder"  -->
-      <button>Agregar</button>
-    </form>
+    <app-agregar-personaje 
+      [nuevo]="nuevo"
+    >
+    </app-agregar-personaje>
   </div>
 </div>
