@@ -7,17 +7,12 @@ import { DbzService } from '../services/dbz.service';
   templateUrl: './main-page.component.html',
 })
 export class MainPageComponent {
-  personajes: Personaje[] = [];
   nuevo: Personaje = {
     nombre: '',
     poder: 0,
   };
-  agregarNuevoPersonaje(argumento: Personaje) {
-    this.personajes.push(argumento);
-  }
 
-  constructor(private dbzService: DbzService) {
-
+  constructor() {
   }
   // cambiarNombre(event: any) {
   //   console.log(event.target.value);
